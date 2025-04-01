@@ -102,12 +102,12 @@ await db.test_connection();
 //////////////////////////////////////////////////
 // Handle Signup POST request                   //
 //////////////////////////////////////////////////
-app.post('/get-example-data', async (req, res) => {
+app.get('/get-example-data', async (req, res) => {
   try {
     return res.json({ username: "RyanIsAmazing" });
   } catch (error) {
     console.error("Error signing up user:", error.message);
-    res.json({ error: "Internal server error" });
+    return res.json({ error: "Internal server error" });
   }
 });
 

@@ -8,7 +8,7 @@ function ExampleData() {
     const fetchData = async () => {
       try {
         const response = await fetch('http://localhost:5000/get-example-data', {
-          method: 'POST',
+          method: 'GET',
           headers: {
             'Content-Type': 'application/json',
           },
